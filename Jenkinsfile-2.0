@@ -7,15 +7,16 @@ pipeline {
         stage("build jar") {
             steps {
                 script {
-              sh  'mvn package'
+                    echo 'building jar file..'
+                    sh 'mvn package'
             }
             }
 
         }
         stage ("build image"){
             steps {
-            script {
-                withCredentials([
+                script {
+                    withCredentials([
           usernamePassword( credentials: 'docker-hub-creds', usernameVariable: USER, passwordVariable: PWD)
      ])
                 sh 'docker build -t 127.0.0.1:8083/java-maven-app:1.0 .'
