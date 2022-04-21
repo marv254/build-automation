@@ -45,7 +45,7 @@ pipeline {
              script {
                  gv.deployApp()
               
-                 echo 'deploying the applicationt to ${ENV}'
+                 echo "deploying the applicationt to ${ENV}"
              }
             }
         }
