@@ -10,7 +10,7 @@ pipeline {
             steps{
                 script{
                     echo 'Initializng groovy script'
-                    echo 'Testing gitlab intergration'
+                    echo 'Testing gitlab & github intergration'
                     gv = load 'script-2.0.groovy'
                 }
             }
