@@ -11,6 +11,7 @@ pipeline {
                 script{
                     echo 'Initializng groovy script'
                     echo 'Testing gitlab & github intergration 2.0'
+                    echo "Tunachill na walevi"
                     gv = load 'script-2.0.groovy'
                 }
             }
